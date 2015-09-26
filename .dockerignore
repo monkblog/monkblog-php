@@ -1,0 +1,6 @@
+.git
+.gitignore
+.gitattributes
+Dockerfile
+docker-compose.yml
+codeship-services.yml

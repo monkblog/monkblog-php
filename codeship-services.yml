@@ -1,0 +1,16 @@
+app:
+  build:
+    image: app
+    dockerfile_path: Dockerfile
+  links:
+    - db
+    - cache
+db:
+  image: mysql:5.6
+  environment:
+    MYSQL_ROOT_PASSWORD:
+    MYSQL_DATABASE: monk
+    MYSQL_USER: monk
+    MYSQL_PASSWORD:
+cache:
+  image: memcached:latest
